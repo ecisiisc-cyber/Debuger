@@ -13,3 +13,11 @@ set_property IOSTANDARD LVCMOS33 [get_ports rx]
 ##TX
 set_property PACKAGE_PIN B18 [get_ports tx]
 set_property IOSTANDARD LVCMOS33 [get_ports tx]
+
+## PICO TX
+set_property PACKAGE_PIN P15 [get_ports uart0_tx]
+set_property IOSTANDARD LVCMOS33 [get_ports uart0_tx]
+
+## PICO RX
+set_property PACKAGE_PIN T18 [get_ports uart0_rx]
+set_property IOSTANDARD LVCMOS33 [get_ports uart0_rx]

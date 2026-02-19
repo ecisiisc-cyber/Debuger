@@ -23,7 +23,9 @@ module led_blink (
     input wire clk,      // 100 MHz clock from onboard oscillator
     output reg led_out,  // connect to external LED via header pin
     input rx,
-    output tx 
+    output tx ,
+    input uart0_rx,
+    output uart0_tx
 );
  
     reg [25:0] counter = 0;
@@ -33,5 +35,6 @@ module led_blink (
         led_out <= counter[25];  
         // This divides 100 MHz clock down to ~1.5 Hz (blinking every ~0.7s)
     end
- assign tx = rx;
+ assign tx = uart0_rx;
+ assign uart0_tx=rx;
 endmodule
